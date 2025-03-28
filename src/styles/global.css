@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 95%;
+    --background-secondary: 0 0% 100%;
     --foreground: 0 0% 15%;
     --card: 0 0% 15%;
     --card-foreground: 0 0% 95%;
@@ -20,15 +21,16 @@
     --success-foreground: 0 0% 95%;
     --warning: 21 100% 65%;
     --warning-foreground: 0 0% 95%;
-    --destructive: 0 89% 68%;
+    --destructive: 0 79% 58%;
     --destructive-foreground: 0 0% 95%;
     --border: 0 0% 80%;
     --input: 0 0% 80%;
     --radius: 0.5rem;
   }
-
+  
   .dark {
-    --background: 225 6% 13%;
+    --background: 240 13% 15%;
+    --background-secondary: 240 21% 11%;
     --foreground: 0 0% 95%;
     --card: 225 6% 13%;
     --card-foreground: 0 0% 95%;
@@ -40,11 +42,11 @@
     --secondary-foreground: 0 0% 95%;
     --tertiary: 293 84% 68%;
     --tertiary-foreground: 0 0% 95%;
-    --success: 85 36% 51%;
+    --success: 85 36% 45%;
     --success-foreground: 225 6% 13%;
     --warning: 21 100% 73%;
     --warning-foreground: 0 0% 95%;
-    --destructive: 0 89% 68%;
+    --destructive: 0 89% 49%;
     --destructive-foreground: 0 0% 95%;
     --border: 225 5% 32%;
     --input: 225 5% 32%;

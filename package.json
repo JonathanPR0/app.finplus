@@ -1,5 +1,5 @@
 {
-  "name": "finplus",
+  "name": "contacerta",
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
@@ -12,6 +12,10 @@
     "@expo-google-fonts/poppins": "^0.2.3",
     "@hookform/resolvers": "^3.9.1",
     "@react-native-async-storage/async-storage": "^2.1.0",
+    "@tamagui/config": "^1.121.6",
+    "@tamagui/lucide-icons": "^1.121.6",
+    "@tamagui/portal": "^1.121.6",
+    "@tamagui/sheet": "^1.121.6",
     "@tanstack/react-query": "^5.62.10",
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.0",
@@ -19,6 +23,7 @@
     "expo": "^52.0.23",
     "expo-app-loading": "^2.1.1",
     "expo-font": "~13.0.2",
+    "expo-module-scripts": "^4.0.2",
     "expo-network": "^7.0.4",
     "expo-router": "~4.0.15",
     "expo-status-bar": "~2.0.0",
@@ -32,6 +37,7 @@
     "react-native-reanimated": "^3.16.6",
     "react-native-safe-area-context": "^5.0.0",
     "tailwind-merge": "^2.2.1",
+    "tamagui": "^1.121.6",
     "zod": "^3.24.1",
     "zustand": "^5.0.2"
   },
@@ -39,6 +45,7 @@
     "@babel/core": "^7.20.0",
     "@react-native-community/cli": "latest",
     "@types/react": "~18.3.12",
+    "react-native-web": "^0.19.13",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.1.3"
   },

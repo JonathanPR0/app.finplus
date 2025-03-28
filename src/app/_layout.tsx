@@ -10,12 +10,18 @@ import {
   Poppins_700Bold,
   useFonts,
 } from "@expo-google-fonts/poppins";
+import { PortalProvider as TamaguiPortalProvider } from "@tamagui/portal";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AppLoading from "expo-app-loading";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-const queryClient = new QueryClient();
 
+import defaultConfig from "@tamagui/config/v3";
+import { createTamagui, TamaguiProvider } from "tamagui";
+
+const configTamagui = createTamagui(defaultConfig);
+
+const queryClient = new QueryClient();
 export default function Layout() {
   const [fontsLoaded] = useFonts({
     Poppins_400Regular,
@@ -26,18 +32,24 @@ export default function Layout() {
   if (!fontsLoaded) {
     return <AppLoading />;
   }
+
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <ThemeProvider>
-          <FontProvider>
-            <ToastProvider position="top">
-              {/* <Profile /> */}
-              <Stack screenOptions={{ headerShown: false }} />
-              <StatusBar style="dark" />
-            </ToastProvider>
-          </FontProvider>
-        </ThemeProvider>
+        <TamaguiProvider config={configTamagui}>
+          <TamaguiPortalProvider>
+            <ThemeProvider>
+              <FontProvider>
+                <ToastProvider position="top">
+                  {/* <Profile /> */}
+                  <Stack screenOptions={{ headerShown: false }} />
+
+                  <StatusBar style="dark" />
+                </ToastProvider>
+              </FontProvider>
+            </ThemeProvider>
+          </TamaguiPortalProvider>
+        </TamaguiProvider>
       </AuthProvider>
     </QueryClientProvider>
   );

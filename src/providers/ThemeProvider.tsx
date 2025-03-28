@@ -1,4 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useColorScheme } from "nativewind";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { View } from "react-native";
 
@@ -13,6 +14,11 @@ const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>("dark");
+  const { setColorScheme } = useColorScheme();
+
+  useEffect(() => {
+    setColorScheme(theme);
+  }, [theme]);
 
   useEffect(() => {
     const loadTheme = async () => {

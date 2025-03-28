@@ -17,6 +17,8 @@ export const useAuth = () => {
         onError(error) {
           //@ts-ignore
           const message = error.response?.data.message || error.message;
+          console.log(error);
+
           toast(message || error.message, "destructive");
         },
       }),

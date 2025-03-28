@@ -1,5 +1,6 @@
 export const colors = {
   background: "hsl(var(--background))",
+  "background-secondary": "hsl(var(--background-secondary))",
   foreground: "hsl(var(--foreground))",
   card: "hsl(var(--card))",
   "card-foreground": "hsl(var(--card-foreground))",
